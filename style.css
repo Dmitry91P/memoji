@@ -1,0 +1,154 @@
+body{
+    background: #CFD0CF;
+    margin: 0;
+    
+}
+header{
+    font: 42px "Arial";
+    color: #434344;
+    text-align: center;
+    padding: 40px 0px;
+    line-height: 47px;
+}
+
+#container{
+    display: grid;
+    grid-template-rows: 130px 130px 130px;
+    grid-template-columns: 130px 130px 130px 130px;
+    grid-gap: 25px;
+    justify-content: center;
+}
+.box {
+    perspective: 600px;
+    
+}
+.back, .front{
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    border-radius: 9px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transform: rotateY(0deg);
+    transition: 1s;
+    transform-style: preserve-3d;
+   
+}
+.back {
+    background: linear-gradient(to top right, #22AB93, #19668D);
+    z-index: 2;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front{
+    background: white;
+    text-align: center;
+    line-height: 120px;
+    
+}
+
+span {
+    font-size: 75px;
+    
+}
+
+.rotate {
+    transform: rotateY(180deg);
+   
+}
+
+.red {
+    background: #F44336;
+}
+.green {
+    background: #5AD66F;
+}
+.disabled {
+    pointer-events: none;
+}
+.timer {
+    margin: 30px auto;
+    font: 32px "Arial";
+    min-width: 350px;
+    text-align: center;
+}
+.shadow {
+    background: #434344;
+    opacity: 0.7;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: none;
+}
+
+.big_window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    display: none;
+}
+.window{
+    background: white;
+    min-width: 350px;
+    text-align: center;
+}
+.result{
+    height: 50px;
+    font: 40px "Arial";
+    color: #434344;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    
+}
+.again{
+    font: 20px "Arial";
+    color: white;
+    background: linear-gradient(to left, #22AB93, #19668D);
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    width: 30%;
+    margin: 30px auto;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgb(41, 41, 41);
+
+}
+.again:active {
+    box-shadow: inset 2px 1px 8px rgb(41, 41, 41) ;
+}
+.result > span {
+    display: inline-block;
+    position: relative;
+    -webkit-animation: bounce .3s ease infinite alternate;
+    animation: bounce .7s ease-out infinite alternate;
+    
+    
+}
+@keyframes bounce {
+   from {
+     transform: scaleY(1) ;
+     
+   }
+   
+   to{
+    transform: scaleY(1.3) translateY(-15px) ;
+    
+   }
+}
+.result > span:nth-child(1){
+    animation-delay: .1s;
+}
+.result > span:nth-child(2){
+    animation-delay: .2s;
+}
+.result > span:nth-child(3){
+   animation-delay: .3s;
+}
+.result > span:nth-child(4){
+    animation-delay: .4s;
+ }
+ 
